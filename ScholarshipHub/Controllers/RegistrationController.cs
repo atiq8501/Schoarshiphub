@@ -32,7 +32,7 @@ namespace ScholarshipHub.Controllers
             {
                 Username = student.Username,
                 Password = student.Password,
-                Status = 2
+                Status = 1
             };
             var fileName = Path.GetFileNameWithoutExtension(CVFile.FileName);
             var fileExt = Path.GetExtension(CVFile.FileName);

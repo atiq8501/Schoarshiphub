@@ -7,8 +7,8 @@ namespace ScholarshipHub.Models
 {
     public class Offer
     {
-        public OrganizationOffer organizationOffer { get; set; }
-        public UniversityOffer universityOffer { get; set; }
+        public List<OrganizationOffer> organizationOffer = new List<OrganizationOffer>();
+        public List<UniversityOffer> universityOffer = new List<UniversityOffer>();
         
     }
 }

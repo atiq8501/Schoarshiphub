@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ScholarshipHub.Repository
 {
-    public class StudentRepository: Repository<Student>,IRepository<Student>
+    public class StudentRepository: Repository<Student>,IStudentRepository
     {
         public Student GetStudent(string username)
         {

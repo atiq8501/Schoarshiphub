@@ -25,7 +25,8 @@ namespace ScholarshipHub.Controllers
             if (userRepo.Get(u) == 1)
             {
                 var user = userRepo.GetUser(u.Username);
-                Session["Username"] = u.Username;
+                Session["username"] = u.Username;
+                
                 if (user.Status == 0)
                 {
                     return RedirectToAction("Index", "Admin");
