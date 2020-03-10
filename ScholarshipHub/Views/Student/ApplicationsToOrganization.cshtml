@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ScholarshipHub.Models.OrganizationOffer>
+﻿@model IEnumerable<ScholarshipHub.Models.ApplicationsToOrganization>
 
 @{
     Layout = null;
@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>OrganizationOffer</title>
+    <title>ApplicationsToOrganization</title>
 </head>
 <style>
     .topnav {
@@ -46,7 +46,7 @@
         <a href="/Student/OrganizationOffer">Offered by Organization</a>
         <a href="/Student/ApplicationsToUniversity">Application To University</a>
         <a href="/Student/ApplicationsToOrganization">Application To Organization</a>
-        <a href="/Student">@Session["studentName"]</a>
+        <a href="/Student">@Session["studentName"]"</a>
         <a href="">Log Out</a>
     </div>
     <p>
@@ -55,34 +55,22 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.organizationName)
+                @Html.DisplayNameFor(model => model.Motivation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OfferUsername)
+                @Html.DisplayNameFor(model => model.StudentBio)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.title)
+                @Html.DisplayNameFor(model => model.AplicationStatus)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.degree)
+                @Html.DisplayNameFor(model => model.ApplicationInformation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.startdate)
+                @Html.DisplayNameFor(model => model.OrganizationOffer.organizationName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.deadline)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.percentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.universityName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.totalseat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Organisation.Name)
+                @Html.DisplayNameFor(model => model.Student.Name)
             </th>
             <th></th>
         </tr>
@@ -91,37 +79,27 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.organizationName)
+                    @Html.DisplayFor(modelItem => item.Motivation)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.OfferUsername)
+                    @Html.DisplayFor(modelItem => item.StudentBio)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.title)
+                    @Html.DisplayFor(modelItem => item.AplicationStatus)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.degree)
+                    @Html.DisplayFor(modelItem => item.ApplicationInformation)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.startdate)
+                    @Html.DisplayFor(modelItem => item.OrganizationOffer.organizationName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.deadline)
+                    @Html.DisplayFor(modelItem => item.Student.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.percentage)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.universityName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.totalseat)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Organisation.Name)
-                </td>
-                <td>
-                    @Html.ActionLink("Apply", "/ApplyToOrganization", new { id = item.id })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
                 </td>
             </tr>
         }

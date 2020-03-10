@@ -117,6 +117,10 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="Controllers\UniversityOfferController.cs" />
+    <Compile Include="Interfaces\IApplicationsToOrganizationRepository.cs" />
+    <Compile Include="Interfaces\IApplictionsToUniversityRepository.cs" />
+    <Compile Include="Repository\ApplicationsToOrganiztionRepository.cs" />
+    <Compile Include="Repository\ApplictionsToUniversityRepository.cs" />
     <Compile Include="Repository\UniversityOfferRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -206,6 +210,9 @@
     <Content Include="Views\Student\OrganizationOffer.cshtml" />
     <Content Include="Views\Student\Apply.cshtml" />
     <Content Include="Views\Student\ApplyToUniversity.cshtml" />
+    <Content Include="Views\Student\ApplyToOrganization.cshtml" />
+    <Content Include="Views\Student\ApplicationsToUniversity.cshtml" />
+    <Content Include="Views\Student\ApplicationsToOrganization.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
